@@ -1,0 +1,60 @@
+/* Non-Active player */
+
+.player--nonActive {
+  /* Dimensions: */
+  width: 10rem;
+  height: 12rem;
+  padding: 1rem 0rem;
+  /* Position */
+  position: absolute;
+  top: 3rem;
+  right: 0rem;
+  background-color: rgb(111, 214, 111);
+}
+
+.player--nonActive .current {
+  display: none;
+}
+.player--nonActive .name {
+  font-size: 1rem;
+}
+.player--nonActive .score {
+  font-size: 4rem;
+}
+
+/* Active player  */
+
+.name {
+  font-size: 2.5rem;
+  top: 19%;
+}
+.score {
+  position: relative;
+  top: 13%;
+}
+.btn {
+  font-size: 1.3rem;
+}
+.dice {
+  left: 27%;
+  top: 53%;
+  height: 7rem;
+}
+.btn--roll {
+  top: 30.3rem;
+  left: 81%;
+}
+.btn--hold {
+  top: 46rem;
+  left: 81%;
+}
+.btn--new {
+  left: 25%;
+}
+
+.current {
+  width: 55%;
+  padding: 0rem;
+  margin-bottom: -8%;
+  margin-left: -75%;
+}
