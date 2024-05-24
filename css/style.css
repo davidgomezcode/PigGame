@@ -108,7 +108,7 @@ main {
   transform: translateX(-50%);
   /* color: #444; */
   background: none;
-  border: 0.3rem solid black;
+  border: 0.5rem solid black;
   font-family: inherit;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -141,7 +141,7 @@ main {
   top: 46.1rem;
 }
 .whiteTower {
-  width: 3.5rem;
+  width: 2rem;
 }
 
 .btn:active {
