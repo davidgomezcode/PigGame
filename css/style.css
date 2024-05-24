@@ -25,6 +25,61 @@ body {
 }
 
 /* LAYOUT */
+.first-window {
+  background-color: lightblue;
+  border-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 7rem;
+  /* padding: 3rem; */
+}
+.first-window h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+.first-window p {
+  margin: 4rem 0 3rem 0;
+  padding: 0 5rem;
+  font-size: 2.4rem;
+}
+.first-window .input-score {
+  width: 16rem;
+  height: 8rem;
+  font-size: 5rem;
+  text-align: center;
+  background-color: rgb(203 240 203);
+
+  /* Border */
+  border: 6px solid black;
+  border-radius: 4rem;
+}
+.first-window .input-score::placeholder {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+.first-window button {
+  margin: 3rem;
+  height: 6rem;
+  width: 16rem;
+  font-size: 2.5rem;
+  /* Border */
+  border: 0.5rem solid #5a5ae4;
+  border-radius: 5rem;
+  /* Transition */
+  transition: font-weight 0.3s ease, background-color 0.3s ease,
+    height 0.3s ease, width 0.3s ease, font-size 0.3s ease;
+}
+.first-window button:hover {
+  font-weight: bold;
+  font-size: 3.2rem;
+  color: white;
+  background-color: #5a5ae4;
+  height: 8rem;
+  width: 21rem;
+}
+
 main {
   position: relative;
   width: 100rem;

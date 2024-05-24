@@ -1,12 +1,14 @@
 'use strict';
 
 // Selecting elements
+let maxScore; //Maximum score that one player has to reach to win.
 const score0EL = document.getElementById('score--1'); // Total score player 1
 const score1EL = document.getElementById('score--2'); // Total score player 2
 const current0EL = document.getElementById('current--1'); // Current score player 1
 const current1EL = document.getElementById('current--2'); // Current score player 2
 
 //Buttons:
+const btnStartGame = document.querySelector('.start--game');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
@@ -17,6 +19,17 @@ const diceEl = document.querySelector('.dice');
 ///Functions:
 // Initial conditions
 let scores, currentScore, activePlayer, playing;
+
+//Se esconde todo menos el botón.
+// document.querySelector("main").classList.remove("hidden");
+
+btnStartGame.addEventListener('click', function () {
+  maxScore = Number(document.querySelector('.input-score').value); //Maximum score that one player has to reach to win.
+  console.log(maxScore);
+  document.querySelector('.first-window').classList.add('hidden');
+  document.querySelector('main').classList.remove('hidden');
+  init();
+});
 
 const init = function () {
   scores = [0, 0, 0];
@@ -45,7 +58,7 @@ const init = function () {
   document.querySelector(`.player--2`).classList.remove('player--winner');
 };
 
-init();
+// init();
 
 //Switch player:
 const switchPlayer = function () {
@@ -106,7 +119,7 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= maxScore) {
       //If a player gets to 100 wins
       //its backgorund turns black:
       document
@@ -118,6 +131,10 @@ btnHold.addEventListener('click', function () {
         .classList.add('player--winner');
       // Add the black background color to the body when a player wins.
       document.querySelector('body').classList.add('player--winner');
+      //POR HACER - The background of the player that lost became XXXXXXXXXx
+      document
+        .querySelector(`.player--${activePlayer === 1 ? 2 : 1}`)
+        .classList.add('player--active');
       //Remove the dice
       diceEl.classList.add('hidden');
       // the current score goes back to zero
