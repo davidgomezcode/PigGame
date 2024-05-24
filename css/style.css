@@ -25,6 +25,18 @@ body {
 }
 
 /* LAYOUT */
+
+.first-window-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+.welcome {
+  margin: 4rem 0;
+  /* margin-bottom: 4rem; */
+  font-size: 3rem;
+}
 .first-window {
   background-color: lightblue;
   border-radius: 4rem;
@@ -34,14 +46,11 @@ body {
   margin: 0px 7rem;
   /* padding: 3rem; */
 }
-.first-window h1 {
-  margin-top: 2rem;
-  font-size: 3rem;
-}
+
 .first-window p {
   margin: 4rem 0 3rem 0;
-  padding: 0 5rem;
-  font-size: 2.4rem;
+  padding: 0 3rem;
+  font-size: 1.8rem;
 }
 .first-window .input-score {
   width: 16rem;
@@ -57,7 +66,7 @@ body {
 .first-window .input-score::placeholder {
   font-size: 1.6rem;
   font-weight: bold;
-  padding-bottom: 2rem;
+  padding-bottom: 10rem;
 }
 .first-window button {
   margin: 3rem;
