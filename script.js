@@ -116,6 +116,8 @@ btnHold.addEventListener('click', function () {
       document
         .querySelector(`.player--${activePlayer}`)
         .classList.add('player--winner');
+      // Add the black background color to the body when a player wins.
+      document.querySelector('body').classList.add('player--winner');
       //Remove the dice
       diceEl.classList.add('hidden');
       // the current score goes back to zero

@@ -168,7 +168,8 @@ main {
 
 .player--winner .name {
   font-weight: 700;
-  color: #c7365f;
+  color: #53c90b;
+  font-size: 4.5rem;
 }
 .hidden {
   display: none;
