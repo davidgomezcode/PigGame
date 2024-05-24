@@ -17,7 +17,8 @@ body {
   height: 100vh;
   color: #333;
   /* background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%); */
-  background-color: rgb(111, 214, 111);
+  /* background-color: rgb(111, 214, 111); */
+  background-color: rgb(168 230 168);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +32,6 @@ main {
   /* background-color: rgba(255, 255, 255, 0.35); */
   backdrop-filter: blur(200px);
   filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
   overflow: hidden;
   display: flex;
@@ -65,7 +65,7 @@ main {
 }
 
 .player--active {
-  background-color: rgba(255, 255, 255, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.4); */
 }
 .player--active .name {
   font-weight: 700;
@@ -108,7 +108,7 @@ main {
   transform: translateX(-50%);
   /* color: #444; */
   background: none;
-  border: 0.5rem solid black;
+  border: 0.3rem solid black;
   font-family: inherit;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -117,7 +117,7 @@ main {
   transition: all 0.2s;
 
   /* background-color: white; */
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(219, 213, 213, 0.87);
   backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;
@@ -141,7 +141,7 @@ main {
   top: 46.1rem;
 }
 .whiteTower {
-  width: 2rem;
+  width: 3.5rem;
 }
 
 .btn:active {
