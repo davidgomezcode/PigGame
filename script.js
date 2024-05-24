@@ -26,7 +26,7 @@ let scores, currentScore, activePlayer, playing;
 btnStartGame.addEventListener('click', function () {
   maxScore = Number(document.querySelector('.input-score').value); //Maximum score that one player has to reach to win.
   console.log(maxScore);
-  document.querySelector('.first-window').classList.add('hidden');
+  document.querySelector('.first-window-container').classList.add('hidden');
   document.querySelector('main').classList.remove('hidden');
   init();
 });
