@@ -44,6 +44,7 @@ const init = function () {
   document.querySelector(`.player--1`).classList.remove('player--winner');
   document.querySelector(`.player--2`).classList.remove('player--winner');
 };
+
 init();
 
 //Switch player:
