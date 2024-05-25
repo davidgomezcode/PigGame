@@ -3,20 +3,21 @@
 .player--nonActive {
   /* Dimensions: */
   width: 10rem;
-  height: 12rem;
-  padding: 1rem 0rem;
+  height: 10rem;
+  padding: 0rem 0rem;
   /* Position */
   position: absolute;
-  top: 3rem;
-  right: 0rem;
+  top: 7rem;
+  right: 6%;
   background-color: rgb(111, 214, 111);
+  border-radius: 2rem;
 }
 
 .player--nonActive .current {
   display: none;
 }
 .player--nonActive .name {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 .player--nonActive .score {
   font-size: 4rem;
