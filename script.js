@@ -12,6 +12,7 @@ const btnStartGame = document.querySelector('.start--game');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+const btnOK = document.querySelector('.btnOK');
 
 // Dice:
 const diceEl = document.querySelector('.dice');
@@ -24,11 +25,27 @@ let scores, currentScore, activePlayer, playing;
 // document.querySelector("main").classList.remove("hidden");
 
 btnStartGame.addEventListener('click', function () {
-  maxScore = Number(document.querySelector('.input-score').value); //Maximum score that one player has to reach to win.
-  document.querySelector('.first-window-container').classList.add('hidden');
-  document.querySelector('main').classList.remove('hidden');
-  document.querySelector('.max--score span').textContent = maxScore;
-  init();
+  maxScore = Number(document.querySelector('.input-score').value);
+  if (maxScore == '') {
+    document
+      .querySelector('.second-window-container')
+      .classList.remove('hidden');
+    document.querySelector('.first-window-container').classList.add('hidden');
+    btnOK.addEventListener('click', function () {
+      document
+        .querySelector('.second-window-container')
+        .classList.add('hidden');
+      document
+        .querySelector('.first-window-container')
+        .classList.remove('hidden');
+    });
+  } else {
+    maxScore = Number(document.querySelector('.input-score').value); //Maximum score that one player has to reach to win.
+    document.querySelector('.first-window-container').classList.add('hidden');
+    document.querySelector('main').classList.remove('hidden');
+    document.querySelector('.max--score span').textContent = maxScore;
+    init();
+  }
 });
 
 const init = function () {

@@ -26,7 +26,8 @@ body {
 
 /* LAYOUT */
 
-.first-window-container {
+.first-window-container,
+.second-window-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +38,8 @@ body {
   /* margin-bottom: 4rem; */
   font-size: 3rem;
 }
-.first-window {
+.first-window,
+.second-window {
   background-color: lightblue;
   border-radius: 4rem;
   display: flex;
@@ -48,10 +50,21 @@ body {
 }
 
 .first-window p {
-  margin: 4rem 0 3rem 0;
+  margin: 2rem 0 1.5rem 0;
   padding: 0 3rem;
   font-size: 1.8rem;
 }
+.first-window p b {
+  font-size: 2rem;
+}
+
+.second-window p {
+  margin: 2rem 0 0rem 0;
+  padding: 0 4rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
 .first-window .input-score {
   width: 16rem;
   height: 8rem;
@@ -68,7 +81,8 @@ body {
   font-weight: bold;
   padding-bottom: 10rem;
 }
-.first-window button {
+.first-window button,
+.second-window button {
   margin: 3rem;
   height: 6rem;
   width: 16rem;
@@ -80,7 +94,8 @@ body {
   transition: font-weight 0.3s ease, background-color 0.3s ease,
     height 0.3s ease, width 0.3s ease, font-size 0.3s ease;
 }
-.first-window button:hover {
+.first-window button:hover,
+.second-window button:hover {
   font-weight: bold;
   font-size: 3.2rem;
   color: white;
