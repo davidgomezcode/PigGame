@@ -13,6 +13,8 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 const btnOK = document.querySelector('.btnOK');
+const btnInstructions = document.querySelector('.btnInstructions');
+const btnOKInstructions = document.querySelector('.btnOKInstructions');
 
 // Dice:
 const diceEl = document.querySelector('.dice');
@@ -46,6 +48,17 @@ btnStartGame.addEventListener('click', function () {
     document.querySelector('.max--score span').textContent = maxScore;
     init();
   }
+});
+
+btnInstructions.addEventListener('click', function () {
+  document.querySelector('.third-window-container').classList.remove('hidden');
+  document.querySelector('.first-window-container').classList.add('hidden');
+  btnOKInstructions.addEventListener('click', function () {
+    document.querySelector('.third-window-container').classList.add('hidden');
+    document
+      .querySelector('.first-window-container')
+      .classList.remove('hidden');
+  });
 });
 
 const init = function () {
@@ -138,7 +151,7 @@ btnHold.addEventListener('click', function () {
       scores[activePlayer];
 
     if (scores[activePlayer] >= maxScore) {
-      //If a player gets to 100 wins
+      //If a player gets to the maxScore
       //its backgorund turns black:
       document
         .querySelector(`.player--${activePlayer}`)
@@ -149,17 +162,18 @@ btnHold.addEventListener('click', function () {
         .classList.add('player--winner');
       // Add the black background color to the body when a player wins.
       document.querySelector('body').classList.add('player--winner');
-      //POR HACER - The background of the player that lost became XXXXXXXXXx
-      document
-        .querySelector(`.player--${activePlayer === 1 ? 2 : 1}`)
-        .classList.add('player--active');
+      //ELIMINAR ESTE BLOQUE SI NO LE VEO SENTIDO - LO QUE HACE ES ADICIONAR EL PLAYER ACTIVE AL QUE PERDIÓ EL JUEGO.
+      document.querySelector(`.player--${activePlayer === 1 ? 2 : 1}`).id =
+        'loser';
+
       //Remove the dice
       diceEl.classList.add('hidden');
       // the current score goes back to zero
       currentScore = 0;
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
-      // the gane stops:
+
+      // the game stops:
       playing = false;
     } else {
       // If no player has 100, switch player:

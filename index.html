@@ -16,15 +16,13 @@
     <section class="first-window-container">
       <h1 class="welcome">Welcome to pig game!</h1>
       <section class="first-window">
-        <p>
-          Roll the dice and hold your score before rolling a one. The first
-          player that gets to the TARGET SCORE wins!
-        </p>
+        <p>The first player that gets to the TARGET SCORE wins!</p>
 
-        <p><b>Please enter the target score:</b></p>
-        <input type="number" class="input-score" placeholder="TARGET SCORE" />
+        <p><b>TARGET SCORE:</b></p>
+        <input type="number" class="input-score" />
 
         <button class="start--game">Start Game</button>
+        <button class="btnInstructions">Instructions</button>
       </section>
     </section>
 
@@ -32,6 +30,25 @@
       <section class="second-window">
         <p><b>Insert a target score to start playing!</b></p>
         <button class="btnOK">OK</button>
+      </section>
+    </section>
+
+    <section class="third-window-container hidden">
+      <section class="third-window">
+        <p><b>Instructions</b></p>
+        <p>
+          1. Select the target score. The target score is the score a player has
+          to get to win
+        </p>
+        <p>2. Roll the dice</p>
+        <p>
+          3. If you roll a one you lose your turn. If you roll any other number
+          you accumulate it in your "current score"
+        </p>
+        <p>4. If you want to store your current score you have to hold</p>
+        <p>5. When your hold score gets to the target score, you win!</p>
+
+        <button class="btnOKInstructions">OK</button>
       </section>
     </section>
 
@@ -60,7 +77,7 @@
       <img src="dice-5.png" alt="Playing dice" class="dice hidden" />
 
       <button class="btn btn--new">🔄 New game</button>
-      <button class="btn btn--roll">🖐🏻 Roll dice</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">
         <figure>
           <img src="./towerWhite.PNG" alt="White tower" class="whiteTower" />
